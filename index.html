@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghitung Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <p class="eyebrow">PROGRAM AKADEMIK</p>
+            <h1>Penghitung Nilai Mahasiswa</h1>
+            <p>Masukkan data dan nilai komponen untuk menghitung hasil akhir mahasiswa.</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Data Mahasiswa</h2>
+
+                <form action="perhitungan.php" method="POST">
+                    <div class="form-group">
+                        <label for="nama">Nama Mahasiswa</label>
+                        <input type="text" id="nama" name="nama"
+                               placeholder="Masukkan nama mahasiswa" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nim">NIM</label>
+                        <input type="text" id="nim" name="nim"
+                               placeholder="Masukkan NIM" required>
+                    </div>
+
+                    <div class="nilai-grid">
+                        <div class="form-group">
+                            <label for="nilaiTugas">Nilai Tugas</label>
+                            <input type="number" id="nilaiTugas"
+                                   name="nilaiTugas" min="0" max="100"
+                                   step="any" placeholder="0–100" required>
+                            <small>Bobot 30%</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nilaiUTS">Nilai UTS</label>
+                            <input type="number" id="nilaiUTS"
+                                   name="nilaiUTS" min="0" max="100"
+                                   step="any" placeholder="0–100" required>
+                            <small>Bobot 30%</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nilaiUAS">Nilai UAS</label>
+                            <input type="number" id="nilaiUAS"
+                                   name="nilaiUAS" min="0" max="100"
+                                   step="any" placeholder="0–100" required>
+                            <small>Bobot 40%</small>
+                        </div>
+                    </div>
+
+                    <button type="submit">Hitung Nilai</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Program Penghitung Nilai Mahasiswa | Tugas 2 PBW</p>
+        </footer>
+    </div>
+</body>
+</html>
